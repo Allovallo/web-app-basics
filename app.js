@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.use(express.static('public'));
 
 // http://localhost: 4444/
 // http://localhost: 4444/about
