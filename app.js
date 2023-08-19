@@ -1,6 +1,13 @@
 const express = require('express');
+const exhbs = require('express-handlebars');
+
 const app = express();
+
 app.use(express.static('public'));
+app.set('view engine', 'handlebars');
+app.engine('hbs', exhbs({
+    extname: 'hbs',
+}));
 
 // http://localhost: 4444/
 // http://localhost: 4444/about
