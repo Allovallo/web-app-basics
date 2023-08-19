@@ -4,12 +4,16 @@ const app = express();
 // http://localhost: 4444/
 // http://localhost: 4444/about
 
-app.get('/', () => {
-    console.log('Це колбек для app.get("/")');
+app.get('/', (req, res) => {
+    // console.log('Це колбек для app.get("/")');
+    // console.log(req.url);
+    res.send('<h1>Привіт, це /</h1>')
 })
 
-app.get('/about', () => {
-    console.log('Це колбек для app.get("/about")');    
+app.get('/about', (req, res) => {
+    // console.log('Це колбек для app.get("/about")');
+    // console.log(req.url);
+    res.send('<h1>Привіт, це /about</h1>')
 })
 
 app.listen(4444, () => { 
