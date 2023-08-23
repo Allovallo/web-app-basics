@@ -4,7 +4,7 @@
   "description": "web-app-basics",
   "main": "index.js",
   "scripts": {
-    "dev": "node app.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "express-handlebars": "^7.1.2",
     "handlebars": "^4.7.8",
     "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

@@ -22,6 +22,13 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/products', (req, res) => {
+    // console.log('Це колбек для app.get("/")');
+    // console.log(req.url);
+    // res.send('<h1>Привіт, це /</h1>');
+    res.render('products');
+});
+
 app.get('/about', (req, res) => {
     // console.log('Це колбек для app.get("/about")');
     // console.log(req.url);
