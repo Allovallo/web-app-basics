@@ -1,5 +1,6 @@
 const express = require('express');
 const exhbs = require('express-handlebars');
+const products = require('./products.json')
 
 const app = express();
 
@@ -26,7 +27,7 @@ app.get('/products', (req, res) => {
     // console.log('Це колбек для app.get("/")');
     // console.log(req.url);
     // res.send('<h1>Привіт, це /</h1>');
-    res.render('products');
+    res.render('products', {products});
 });
 
 app.get('/about', (req, res) => {
