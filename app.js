@@ -20,21 +20,21 @@ app.get('/', (req, res) => {
     // console.log('Це колбек для app.get("/")');
     // console.log(req.url);
     // res.send('<h1>Привіт, це /</h1>');
-    res.render('home');
+    res.render('home', {cssFileName: 'home'});
 });
 
 app.get('/products', (req, res) => {
     // console.log('Це колбек для app.get("/")');
     // console.log(req.url);
     // res.send('<h1>Привіт, це /</h1>');
-    res.render('products', {products});
+    res.render('products', {products, cssFileName: 'products'});
 });
 
 app.get('/about', (req, res) => {
     // console.log('Це колбек для app.get("/about")');
     // console.log(req.url);
     // res.send('<h1>Привіт, це /about</h1>');
-    res.render('about');
+    res.render('about', {cssFileName: 'about'});
 });
 
 app.listen(4444, () => { 
