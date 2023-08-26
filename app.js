@@ -37,6 +37,10 @@ app.get('/products', (req, res) => {
     });
 });
 
+app.get('/product/:productId', (req, res) => {
+    console.log(req.params);
+})
+
 app.get('/about', (req, res) => {
     // console.log('Це колбек для app.get("/about")');
     // console.log(req.url);
